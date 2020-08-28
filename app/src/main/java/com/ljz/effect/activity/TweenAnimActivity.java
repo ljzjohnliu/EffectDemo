@@ -1,6 +1,8 @@
 package com.ljz.effect.activity;
 
+import android.animation.Animator;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -12,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.ljz.effect.R;
 
 public class TweenAnimActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAG = "TweenAnimActivity";
     private ImageView tweenImg;
     private Animation animation;
 
@@ -50,6 +53,24 @@ public class TweenAnimActivity extends AppCompatActivity implements View.OnClick
                 break;
             default:
                 return;
+        }
+        if (animation != null) {
+            animation.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    Log.d(TAG, "onAnimationStart: start!");
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    Log.d(TAG, "onAnimationEnd: end!");
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+                    Log.d(TAG, "onAnimationRepeat: repeat!");
+                }
+            });
         }
         if (animation != null) {
             tweenImg.startAnimation(animation);
