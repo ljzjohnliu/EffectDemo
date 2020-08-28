@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false">
+
+    <scale
+        android:duration="1500"
+        android:fillAfter="false"
+        android:fillBefore="true"
+        android:fillEnabled="true"
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:pivotX="50%"
+
+        android:pivotY="50%"
+        android:repeatCount="0"
+
+        android:repeatMode="restart"
+        android:startOffset="0"
+
+        android:toXScale="2"
+        android:toYScale="2" />
+
+    <!-- 相对当前位置的像素距离 -->
+    <translate
+        android:duration="1500"
+        android:fillAfter="false"
+        android:fillBefore="true"
+        android:fillEnabled="true"
+        android:fromXDelta="0"
+        android:fromYDelta="0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:repeatCount="0"
+
+        android:repeatMode="restart"
+        android:startOffset="0"
+
+        android:toXDelta="500"
+        android:toYDelta="500" />
+
+    <alpha
+        android:duration="1500"
+        android:fillAfter="false"
+        android:fillBefore="true"
+        android:fillEnabled="true"
+        android:fromAlpha="1.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:repeatCount="0"
+        android:repeatMode="restart"
+
+        android:startOffset="0"
+        android:toAlpha="0.0" />
+
+    <rotate
+        android:duration="1500"
+        android:fillAfter="false"
+        android:fillBefore="true"
+        android:fillEnabled="true"
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:pivotX="50%"
+
+        android:pivotY="50%"
+        android:repeatCount="0"
+        android:repeatMode="restart"
+        android:startOffset="0"
+        android:toDegrees="270" />
+
+</set>
