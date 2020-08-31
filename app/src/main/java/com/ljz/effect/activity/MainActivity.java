@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.frame_anim_btn).setOnClickListener(this);
         findViewById(R.id.tween_anim_btn).setOnClickListener(this);
-        findViewById(R.id.static_ref_btn).setOnClickListener(this);
+        findViewById(R.id.object_anim_btn).setOnClickListener(this);
         findViewById(R.id.async_btn).setOnClickListener(this);
         findViewById(R.id.handle_btn).setOnClickListener(this);
         findViewById(R.id.thread_btn).setOnClickListener(this);
@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tween_anim_btn:
                 intent.setClassName("com.ljz.effect", "com.ljz.effect.activity.TweenAnimActivity");
                 break;
-            case R.id.static_ref_btn:
+            case R.id.object_anim_btn:
+                intent.setClassName("com.ljz.effect", "com.ljz.effect.activity.ObjectAnimActivity");
                 break;
             case R.id.async_btn:
                 break;
