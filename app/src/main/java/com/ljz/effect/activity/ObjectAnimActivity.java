@@ -3,10 +3,7 @@ package com.ljz.effect.activity;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -15,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.ljz.effect.R;
 
 public class ObjectAnimActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "TweenAnimActivity";
+    private static final String TAG = "ObjectAnimActivity";
     private ImageView objectImg;
     private ObjectAnimator animator;
 

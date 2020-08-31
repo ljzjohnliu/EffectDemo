@@ -3,6 +3,8 @@
     package="com.ljz.effect">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:name="com.ljz.effect.MyApplication"
@@ -24,6 +26,7 @@
         <activity android:name="com.ljz.effect.activity.FrameAnimActivity" />
         <activity android:name="com.ljz.effect.activity.TweenAnimActivity" />
         <activity android:name="com.ljz.effect.activity.ObjectAnimActivity" />
+        <activity android:name="com.ljz.effect.activity.WebpAnimActivity" />
     </application>
 
 </manifest>

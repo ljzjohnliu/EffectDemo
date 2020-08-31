@@ -1,6 +1,5 @@
 package com.ljz.effect.activity;
 
-import android.animation.Animator;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="播放webp动画"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/asset_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="使用assets资源"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/drawable_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="使用drawable资源"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/uri_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="使用Uri资源"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/google_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="FrameSequenceDrawable+ImageView"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <!--
+    webp_anim
+    android:src="@drawable/wp_dainiqukanyinghuayu"
+    -->
+    <com.humrousz.sequence.view.AnimatedImageView
+        android:id="@+id/google_sequence_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        app:loopCount="1"
+        app:loopBehavior="loop_default|loop_finite|loop_inf"
+        android:scaleType="centerCrop"
+        android:src="@drawable/newyear"
+        />
+
+    <ImageView
+        android:id="@+id/webp_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/tween_01"
+        />
+
+</LinearLayout>
