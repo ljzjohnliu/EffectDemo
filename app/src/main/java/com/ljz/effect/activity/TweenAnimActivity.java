@@ -30,6 +30,7 @@ public class TweenAnimActivity extends AppCompatActivity implements View.OnClick
         findViewById(R.id.rotate_btn).setOnClickListener(this);
         findViewById(R.id.alpha_btn).setOnClickListener(this);
         findViewById(R.id.all_tween_btn).setOnClickListener(this);
+        findViewById(R.id.time_tween_btn).setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +52,9 @@ public class TweenAnimActivity extends AppCompatActivity implements View.OnClick
             case R.id.all_tween_btn:
                 animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.all_tween_animation);
                 break;
+            case R.id.time_tween_btn:
+                displayTweenByTime();
+                return;
             default:
                 return;
         }
@@ -78,5 +82,29 @@ public class TweenAnimActivity extends AppCompatActivity implements View.OnClick
             Toast.makeText(TweenAnimActivity.this, "没有选择任何补间动画类型", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    private void displayTweenByTime() {
+        final Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.translate_animation);
+        final Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_animation);
+        final Animation animation3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_animation);
+        final Animation animation4 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_animation);
+        animation1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                tweenImg.startAnimation(animation2);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        tweenImg.startAnimation(animation1);
     }
 }
