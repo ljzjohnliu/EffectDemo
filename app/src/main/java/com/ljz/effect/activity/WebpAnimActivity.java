@@ -76,7 +76,8 @@ public class WebpAnimActivity extends AppCompatActivity implements View.OnClickL
         switch (type) {
             case TYPE_ASSETS:
                 //设置Assets下的图片
-                mGoogleImage.setImageResourceFromAssets("newyear.webp");
+//                mGoogleImage.setImageResourceFromAssets("newyear.webp");
+                mGoogleImage.setImageResourceFromAssets("donghua.gif");
                 break;
             case TYPE_DRAWABLE:
                 //设置图片通过drawable
@@ -96,7 +97,8 @@ public class WebpAnimActivity extends AppCompatActivity implements View.OnClickL
         ImageView mImage = findViewById(R.id.webp_img);
         InputStream in = null;
         try {
-            in = getResources().getAssets().open("dainiqukanyinghuayu.webp");
+//            in = getResources().getAssets().open("dainiqukanyinghuayu.webp");
+            in = getResources().getAssets().open("donghua.gif");
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -68,6 +68,9 @@
     在开发者选项-绘图-动画程序时长调整 为关闭动画，会影响属性动画播放
 
 ## FrameSequenceDrawable播放webp动画
+
+    AnimatedImageView 或者 FrameSequenceDrawable + ImageView 可以播放webp和gif动画
+    
     引入了lib库，只能使用ibuild命令编译才能运行 直接使用studio的编译运行会崩溃找不到so库，原因待查！--已解决方案如下：
     
 ### AndroidStudio 3.5 build 能打包 so 但是直接 run 就不会包含 so
