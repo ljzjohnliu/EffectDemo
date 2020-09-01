@@ -1,8 +1,10 @@
 package com.ljz.effect.activity;
 
+import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -106,6 +108,27 @@ public class ObjectAnimActivity extends AppCompatActivity implements View.OnClic
                 return;
         }
         if (animator != null) {
+            animator.addListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(Animator animation) {
+                    Log.d(TAG, "onAnimationStart: ");
+                }
+
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    Log.d(TAG, "onAnimationEnd: ");
+                }
+
+                @Override
+                public void onAnimationCancel(Animator animation) {
+                    Log.d(TAG, "onAnimationCancel: ");
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animation) {
+                    Log.d(TAG, "onAnimationRepeat: ");
+                }
+            });
             animator.start();
         } else {
             Toast.makeText(ObjectAnimActivity.this, "没有选择任何补间动画类型", Toast.LENGTH_SHORT).show();
