@@ -68,4 +68,25 @@
     在开发者选项-绘图-动画程序时长调整 为关闭动画，会影响属性动画播放
 
 ## FrameSequenceDrawable播放webp动画
-    引入了lib库，只能使用ibuild命令编译才能运行 直接使用studio的编译运行会崩溃找不到so库，原因待查！
+    引入了lib库，只能使用ibuild命令编译才能运行 直接使用studio的编译运行会崩溃找不到so库，原因待查！--已解决方案如下：
+    
+### AndroidStudio 3.5 build 能打包 so 但是直接 run 就不会包含 so
+    通过 Build -> Build Bundle(s)/APK(s) -> Build APK(s) 就能正常编译出包含所有 libxxx.so 的APK，运行正常；
+    但是连接设备点击 run app 按钮时，报错找到不 so，查看生成的 APK 里未包含 libxxx.so
+    
+    【解决办法】
+    参考：https://stackoverflow.com/questions/58204273/jni-library-not-getting-included-in-debug-build
+    在 app 模块下的 build.gradle 中 buildTypes下添加 debug 的 ndk 配置，如下：
+    
+    android {
+        ...
+        buildTypes {
+            ...
+            debug {
+                ndk {
+                    abiFilters "armeabi","x86"
+                }
+            }
+        }
+    }
+    具体 abiFilters 有哪些以实际有的为准

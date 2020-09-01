@@ -35,12 +35,18 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
+            ndk {
+                abiFilters "armeabi"
+            }
         }
         release {
             buildConfigField("boolean", "LOG_DEBUG", "false")
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
+            ndk {
+                abiFilters "armeabi"
+            }
         }
         android.applicationVariants.all { variant ->
             variant.outputs.all {
