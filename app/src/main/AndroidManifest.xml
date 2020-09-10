@@ -27,6 +27,7 @@
         <activity android:name="com.ljz.effect.activity.TweenAnimActivity" />
         <activity android:name="com.ljz.effect.activity.ObjectAnimActivity" />
         <activity android:name="com.ljz.effect.activity.WebpAnimActivity" />
+        <activity android:name="com.ljz.effect.activity.RemoveViewActivity" />
     </application>
 
 </manifest>
