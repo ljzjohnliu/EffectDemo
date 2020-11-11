@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.object_anim_btn).setOnClickListener(this);
         findViewById(R.id.webp_anim_btn).setOnClickListener(this);
         findViewById(R.id.remove_view_btn).setOnClickListener(this);
+        findViewById(R.id.dragger_view_btn).setOnClickListener(this);
         findViewById(R.id.thread_btn).setOnClickListener(this);
     }
 
@@ -51,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.remove_view_btn:
                 intent.setClassName("com.ljz.effect", "com.ljz.effect.activity.RemoveViewActivity");
+                break;
+            case R.id.dragger_view_btn:
+                intent.setClassName("com.ljz.effect", "com.ljz.effect.activity.DraggerViewActivity");
                 break;
             case R.id.thread_btn:
                 break;

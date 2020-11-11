@@ -28,6 +28,7 @@
         <activity android:name="com.ljz.effect.activity.ObjectAnimActivity" />
         <activity android:name="com.ljz.effect.activity.WebpAnimActivity" />
         <activity android:name="com.ljz.effect.activity.RemoveViewActivity" />
+        <activity android:name="com.ljz.effect.activity.DraggerViewActivity" />
     </application>
 
 </manifest>

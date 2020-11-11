@@ -58,6 +58,15 @@
         />
 
     <Button
+        android:id="@+id/dragger_view_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:text="拖动view"
+        />
+
+    <Button
         android:id="@+id/thread_btn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
