@@ -4,8 +4,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +18,9 @@ public class DraggerViewActivity extends AppCompatActivity {
     private static final String TAG = "DraggerViewActivity";
     private Button testBtn;
 
+    private TextView clickTv;
+    private ImageView guideImg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +28,20 @@ public class DraggerViewActivity extends AppCompatActivity {
 
         final FrameLayout frameLayout = findViewById(R.id.frame);
         testBtn = findViewById(R.id.get_layout);
+        clickTv = findViewById(R.id.test_click);
+        guideImg = findViewById(R.id.test_guide);
+
+        WebView webView = new WebView(this);
+        webView.loadUrl("www.baidu.com");
+        frameLayout.addView(webView);
+
+        clickTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: ******************clickTv***************");
+            }
+        });
+        
         testBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
